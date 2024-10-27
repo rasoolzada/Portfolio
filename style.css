@@ -210,11 +210,13 @@ body {
 /*Projects*/
 .project-slider {
     display: flex;
-    flex-wrap: wrap; /* Allows for wrapping of slides */
-    justify-content: center; /* Center align slides */
-    gap: 2em; /* Space between slides */
-    transition: transform 0.5s ease; /* Smooth transition for sliding */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    transition: transform 0.5s ease;
+    overflow-x: hidden; /* Hides the horizontal scrollbar */
 }
+
 
 .project-slide {
     flex: 0 1 calc(50% - 1em); /* Two slides per row with space */
