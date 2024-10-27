@@ -1,24 +1,25 @@
-// Fade in sections on scroll
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".content-section");
 
-    const fadeInSection = (section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 150) {
-            section.style.opacity = "1";
-        }
-    };
+    // Initially add 'hidden' class to each section
+    sections.forEach(section => section.classList.add("hidden"));
 
-    window.addEventListener("scroll", () => {
-        sections.forEach(fadeInSection);
-    });
-});
+    // Set up the intersection observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Remove 'hidden' class and add alternating animation classes
+                entry.target.classList.remove("hidden");
+                if (index % 2 === 0) {
+                    entry.target.classList.add("slide-in-left");
+                } else {
+                    entry.target.classList.add("slide-in-right");
+                }
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.2 });
 
-// Project Slider (Manual Scroll)
-document.querySelector('.project-slider').addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-        e.target.scrollBy(300, 0);
-    } else {
-        e.target.scrollBy(-300, 0);
-    }
+    // Observe each section
+    sections.forEach(section => observer.observe(section));
 });

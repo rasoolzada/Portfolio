@@ -3,64 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rasool Zada's Portfolio</title>
+    <title>Rasool Zada | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Adding a simple slider library, like Splide -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splide/3.6.11/css/splide.min.css">
 </head>
 <body>
-    <header class="fade-in">
-        <h1>Rasool Zada</h1>
-        <p>.NET Developer | Web Enthusiast</p>
-        <p>Passionate about transforming ideas into robust applications.</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1 class="fade-in">Rasool Zada</h1>
+            <p class="typewriter">.NET Developer | Creative Problem Solver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
     </header>
-    
-    <section id="about" class="slide-up">
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
         <h2>About Me</h2>
-        <p>I'm a .NET developer specializing in dynamic web applications...</p>
-    </section>
-    
-    <section id="skills" class="slide-up">
-        <h2>Skills</h2>
-        <ul>
-            <li>ASP.NET, MVC, Entity Framework</li>
-            <li>ReactJS, C#, JavaScript</li>
-            <li>HTML/CSS, Bootstrap, SQL Server</li>
-        </ul>
+        <p>Passionate .NET developer dedicated to transforming ideas into impactful applications...</p>
     </section>
 
-    <section id="projects" class="slide-up">
-        <h2>Projects</h2>
-        <div class="splide" id="project-slider">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <h3>Weather API App</h3>
-                        <p>A simple React app using Axios for weather data.</p>
-                        <a href="https://github.com/yourusername/weather-app" target="_blank">GitHub</a>
-                    </li>
-                    <li class="splide__slide">
-                        <h3>Currency Exchange App</h3>
-                        <p>Exchange rate app with unique UI and functionalities.</p>
-                        <a href="https://github.com/yourusername/currency-exchange-app" target="_blank">GitHub</a>
-                    </li>
-                </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="content-section alt-background">
+        <h2 class="text-center mb-4">Skills</h2>
+        <div class="skills-container">
+            <div class="skill" id="aspnet">
+                <div class="skill-card fade-in">
+                    <span>ASP.NET & MVC</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 85%;"></div> <!-- Set width for ASP.NET -->
+                        <div class="percentage-label">85%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill" id="ef">
+                <div class="skill-card fade-in">
+                    <span>Entity Framework</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%;"></div> <!-- Set width for Entity Framework -->
+                        <div class="percentage-label">75%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill" id="react">
+                <div class="skill-card fade-in">
+                    <span>ReactJS</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 90%;"></div> <!-- Set width for ReactJS -->
+                        <div class="percentage-label">90%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill" id="sql">
+                <div class="skill-card fade-in">
+                    <span>SQL Server</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;"></div> <!-- Set width for SQL Server -->
+                        <div class="percentage-label">80%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill" id="flutter">
+                <div class="skill-card fade-in">
+                    <span>Flutter</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;"></div> <!-- Set width for SQL Server -->
+                        <div class="percentage-label">75%</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="slide-up">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:rasool.zada@example.com">rasool.zada@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/rasool-zada/" target="_blank">Rasool Zada</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+
+    <!-- Projects Section with Slider -->
+    <section id="projects" class="content-section">
+        <h2 class="text-center mb-4">Projects</h2>
+        <div class="project-slider">
+            <div class="project-slide">
+                <img src="Images/image.jpeg" class="project-image" alt="Weather API App">
+                <h3>Weather API App</h3>
+                <p>Built using React and Axios for live weather data.</p>
+                <a href="https://github.com/yourusername/weather-app" target="_blank" class="cta-button">View on GitHub</a>
+            </div>
+            <div class="project-slide">
+                <img src="Images/image.jpeg" class="project-image" alt="Currency Exchange App">
+                <h3>Currency Exchange App</h3>
+                <p>Unique UI app for real-time currency conversions.</p>
+                <a href="https://github.com/yourusername/currency-exchange-app" target="_blank" class="cta-button">View on GitHub</a>
+            </div>
+            <div class="project-slide">
+                <img src="Images/image.jpeg" class="project-image" alt="Task Manager App">
+                <h3>Task Manager App</h3>
+                <p>Efficient task management tool with user authentication.</p>
+                <a href="https://github.com/yourusername/task-manager-app" target="_blank" class="cta-button">View on GitHub</a>
+            </div>
+            <div class="project-slide">
+                <img src="Images/image.jpeg" class="project-image" alt="E-Commerce App">
+                <h3>E-Commerce App</h3>
+                <p>Online store with a fully functional shopping cart.</p>
+                <a href="https://github.com/yourusername/e-commerce-app" target="_blank" class="cta-button">View on GitHub</a>
+            </div>
+        </div>
     </section>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/splide/3.6.11/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#project-slider', { type: 'loop', autoplay: true }).mount();
-        });
-    </script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
