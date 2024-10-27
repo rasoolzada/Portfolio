@@ -141,7 +141,7 @@ body {
     right: 10px; /* Align it to the right */
     bottom: 50%; /* Center it vertically */
     transform: translateY(50%); /* Adjust position */
-    color: #fff; /* Text color */
+    color: black; /* Text color */
     font-weight: bold; /* Bold text */
     opacity: 0; /* Start hidden */
     transition: opacity 0.3s ease; /* Smooth transition for visibility */
@@ -168,13 +168,7 @@ body {
     transition: width 0.3s ease;
 }
 
-.percentage-label {
-    margin-right: 5px; /* Adds spacing between label and edge */
-    color: black;
-    font-weight: bold;
-    opacity: 0; /* Hidden initially */
-    transition: opacity 0.3s ease;
-}
+
 
 /* Show percentage label on hover */
 .skill-card:hover .percentage-label {
