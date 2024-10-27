@@ -148,28 +148,39 @@ body {
 }
 
 /* Skill Bar Styles */
+/* Skill Bar Styles */
 .skill-bar {
-    position: relative; /* Needed for absolute positioning of the label */
-    background-color: #e0e0e0; /* Light grey background for skill bar */
+    position: relative;
+    background-color: #e0e0e0;
     border-radius: 8px;
-    height: 20px; /* Height of the skill bar */
-    overflow: hidden; /* Ensures the fill doesn't overflow */
+    height: 20px;
+    overflow: hidden;
 }
 
 .skill-fill {
-    background-color: #4caf50; /* Green fill color */
-    height: 100%; /* Fill height */
-    border-radius: 8px; /* Rounded corners for fill */
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+    display: flex; /* Allows centering label in the fill */
+    justify-content: flex-end; /* Align label to the right end */
+    align-items: center; /* Center label vertically */
+    transition: width 0.3s ease;
 }
 
-/* Show percentage on hover */
+.percentage-label {
+    margin-right: 5px; /* Adds spacing between label and edge */
+    color: black;
+    font-weight: bold;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease;
+}
+
+/* Show percentage label on hover */
 .skill-card:hover .percentage-label {
-    opacity: 1; /* Show the percentage label */
+    opacity: 1; /* Reveal on hover */
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-}
 
 
 
@@ -256,3 +267,9 @@ body {
     }
 }
 
+/*For project section in mobile to show 1 column in a row*/
+@media (max-width: 600px) {
+    .project-slide {
+        flex: 0 1 100%; /* Full width on mobile */
+    }
+}
