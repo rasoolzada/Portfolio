@@ -19,41 +19,45 @@ header {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-.slide-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 1s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 section {
     padding: 1.5em;
     margin: 1em auto;
     max-width: 800px;
-    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.5s, opacity 0.5s;
 }
 
 h2 {
     border-bottom: 2px solid #00cc66;
     padding-bottom: 0.5em;
     margin-bottom: 1em;
+}
+
+/* Slide in animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+}
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
 }
 
 #skills ul {
@@ -64,23 +68,18 @@ h2 {
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-.splide {
-    margin: 1em 0;
-    overflow: hidden;
+.animate-left {
+    transform: translateX(-100px);
 }
 
-.splide__slide {
-    background: #e9e9e9;
-    padding: 1em;
-    border-radius: 8px;
-    text-align: center;
+.animate-right {
+    transform: translateX(100px);
 }
 
-.splide__slide h3 {
-    margin-bottom: 0.5em;
+.animate-left.active {
+    animation: slideInLeft 1s forwards;
 }
 
-.splide__slide a {
-    color: #0066cc;
-    text-decoration: none;
+.animate-right.active {
+    animation: slideInRight 1s forwards;
 }

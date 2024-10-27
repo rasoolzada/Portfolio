@@ -1,20 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const animatedElements = document.querySelectorAll(".animate-left, .animate-right");
+// Fade in sections on scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".content-section");
 
-    function checkPosition() {
-        animatedElements.forEach((element) => {
-            const position = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            // Add 'active' class when the element is visible in the viewport
-            if (position < windowHeight - 100) {
-                element.classList.add("active");
-            }
-        });
+    const fadeInSection = (section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 150) {
+            section.style.opacity = "1";
+        }
+    };
+
+    window.addEventListener("scroll", () => {
+        sections.forEach(fadeInSection);
+    });
+});
+
+// Project Slider (Manual Scroll)
+document.querySelector('.project-slider').addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        e.target.scrollBy(300, 0);
+    } else {
+        e.target.scrollBy(-300, 0);
     }
-
-    // Run the checkPosition function on scroll
-    window.addEventListener("scroll", checkPosition);
-    // Initial check on page load
-    checkPosition();
 });
