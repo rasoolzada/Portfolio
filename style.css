@@ -11,6 +11,90 @@ body {
     color: #333;
 }
 
+/* Sidebar Styling */
+.sidebar {
+    width: 250px; /* Set a fixed width for the sidebar */
+    position: sticky;
+    float: left;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; /* Bring sidebar in front of main content */
+}
+
+
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin: 1em 0;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: #00cc66;
+}
+
+.sidebar nav ul li a:focus {
+    outline: none;
+    color: #00cc66;
+}
+
+.sidebar nav ul li a:active {
+    color: #006633;
+}
+
+
+
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 2em;
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+}
+
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .nav-links a {
+        font-size: 1em;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+
+
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -42,13 +126,14 @@ body {
 
 /* Typewriter Animation */
 @keyframes typing {
-    0%, 100% {
+    0% {
         width: 0;
     }
 
     50% {
         width: 100%;
     }
+    100% { width: 100%; }
 }
 
 /* Media Queries for Responsiveness */
@@ -70,7 +155,7 @@ body {
 /* Section Styling */
 /* Common styles for sections */
 .content-section {
-    padding: 4em 2em;
+    padding: 2em 2em;
     max-width: 1200px;
     margin: auto;
     opacity: 0;
@@ -113,7 +198,7 @@ body {
     animation: slide-in-right 1.5s forwards;
 }
 
-}
+
 
 .alt-background {
     background-color: #f4f4f4;
@@ -123,13 +208,13 @@ body {
 .skills-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5em; /* Spacing between skill cards */
+    gap: 0.5em; /* Spacing between skill cards */
 }
 
 /* Skill Cards */
 .skill-card {
     background: white;
-    padding: 2em;
+    padding: 1em;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -267,5 +352,42 @@ body {
 @media (max-width: 600px) {
     .project-slide {
         flex: 0 1 100%; /* Full width on mobile */
+    }
+}
+
+/*for Mobile*/
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    margin: 1em; /* Optional: add some margin */
+}
+
+.hamburger div {
+    width: 25px; /* Width of the bars */
+    height: 3px; /* Height of the bars */
+    background-color: #fff; /* Color of the bars */
+    margin: 4px 0; /* Spacing between the bars */
+    transition: 0.4s; /* Transition for animation */
+}
+
+/* Hide sidebar on mobile */
+.sidebar {
+    display: flex; /* Flex layout */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger button */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove sidebar margin */
+        width: 100%; /* Full width */
     }
 }
