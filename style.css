@@ -78,10 +78,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px; /* Add padding for better click area */
     border-radius: 5px; /* Rounded corners for links */
 }
-.sidebar nav ul li a:visited {
-    color: #00cc66;
-    background-color: rgba(255, 255, 255, 0.2); 
-}
 
 .sidebar nav ul li a:hover {
     color: #00cc66;
@@ -93,11 +89,11 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(255, 255, 255, 0.3); /* Darker background for active state */
 }
 
-.sidebar nav ul li a:focus {
-    outline: none;
-    color: #00cc66;
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background for focus state */
+.sidebar nav ul li a.visited {
+    color: #ffcc00; /* Change to your desired color for visited links */
+    text-decoration: underline; /* Underline for visited links */
 }
+
 
 
 

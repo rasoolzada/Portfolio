@@ -51,13 +51,63 @@ function toggleSidebar() {
 }
 
 // Auto-hide sidebar on scroll or touch events
-window.addEventListener('scroll', () => {
-    document.querySelector('.sidebar').classList.remove('active');
-});
+// window.addEventListener('scroll', () => {
+//     document.querySelector('.sidebar').classList.remove('active');
+// });
 
 window.addEventListener('touchstart', () => {
     document.querySelector('.sidebar').classList.remove('active');
 });
 
 
- 
+ // Function to handle link clicks
+ document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll(".content-section");
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("hidden");
+                entry.target.classList.add(index % 2 === 0 ? "slide-in-left" : "slide-in-right");
+                observer.unobserve(entry.target); // Stop observing after it becomes visible
+            }
+        });
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    const links = document.querySelectorAll('.sidebar nav ul li a');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden'); // Ensure section is visible
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Handle visited links
+            links.forEach(l => l.classList.remove('visited'));
+            this.classList.add('visited');
+
+            // Store visited link in localStorage
+            const visitedLinks = JSON.parse(localStorage.getItem('visitedLinks')) || [];
+            if (!visitedLinks.includes(targetId)) {
+                visitedLinks.push(targetId);
+                localStorage.setItem('visitedLinks', JSON.stringify(visitedLinks));
+            }
+        });
+    });
+    
+    // Restore visited state on page load
+    const storedLinks = JSON.parse(localStorage.getItem('visitedLinks')) || [];
+    storedLinks.forEach(link => {
+        const visitedLink = document.querySelector(`.sidebar nav ul li a[href="${link}"]`);
+        if (visitedLink) {
+            visitedLink.classList.add('visited');
+        }
+    });
+});
