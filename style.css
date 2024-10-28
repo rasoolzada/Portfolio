@@ -117,22 +117,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Sidebar */
 @media (max-width: 768px) {
     .sidebar {
+        transform: translateX(-100%); /* Slide sidebar out of view initially */
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 200px;
+        height: 100vh;
+        background-color: #333;
+        z-index: 1000;
+        transition: transform 0.3s ease;
     }
+
+        .sidebar.active {
+            transform: translateX(0); /* Slide in when active */
+        }
 
     .nav-links a {
-        font-size: 1em;
         pointer-events: auto; /* Ensure links are clickable */
-
-{
-    pointer-events: auto; /* Ensure links are clickable */
-}
-    }
-
-    .main-content {
-        margin-left: 200px;
     }
 }
+
 
 
 
