@@ -122,6 +122,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-links a {
         font-size: 1em;
+        pointer-events: auto; /* Ensure links are clickable */
+
+{
+    pointer-events: auto; /* Ensure links are clickable */
+}
     }
 
     .main-content {
@@ -134,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 70vh;
     background: url('Images/image.jpeg') no-repeat center center/cover;
     display: flex;
     align-items: center;
