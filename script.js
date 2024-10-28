@@ -45,14 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //For mobile
-    document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const sidebar = document.querySelector(".sidebar");
+// For mobile sidebar toggle
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
 
-        // Toggle sidebar visibility on hamburger click
-        hamburger.addEventListener("click", function () {
-            sidebar.style.display = (sidebar.style.display === "flex") ? "none" : "flex";
-        });
-    });
+// Auto-hide sidebar on scroll or touch events
+window.addEventListener('scroll', () => {
+    document.querySelector('.sidebar').classList.remove('active');
+});
+
+window.addEventListener('touchstart', () => {
+    document.querySelector('.sidebar').classList.remove('active');
+});
+
 
  
