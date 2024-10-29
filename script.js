@@ -49,15 +49,21 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
 }
+document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.remove('active');
+    });
+});
+
 
 // Auto-hide sidebar on scroll or touch events
 // window.addEventListener('scroll', () => {
 //     document.querySelector('.sidebar').classList.remove('active');
 // });
 
-window.addEventListener('touchstart', () => {
-    document.querySelector('.sidebar').classList.remove('active');
-});
+// window.addEventListener('touchstart', () => {
+//     document.querySelector('.sidebar').classList.remove('active');
+// });
 
 
  // Function to handle link clicks
