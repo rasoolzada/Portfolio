@@ -435,31 +435,32 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/*for Mobile*/
+/* For Mobile */
 /* Hamburger Menu Styling */
 .hamburger {
     display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
+    position: fixed; /* Change to fixed for sticky effect */
     top: 1em;
     left: 1em;
     z-index: 1100; /* Above sidebar */
 }
 
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-}
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
 
 /* Mobile Sidebar and Hamburger Button Visibility */
 @media (max-width: 768px) {
     .hamburger {
         display: flex; /* Show hamburger button */
     }
+
     .sidebar {
         display: none; /* Hide sidebar by default */
         position: fixed;
@@ -472,10 +473,10 @@ h1, h2, h3, h4, h5, h6 {
         transition: transform 0.3s ease;
     }
 
-    .sidebar.active {
-        display: flex; /* Show sidebar when active */
-        transform: translateX(0); /* Slide in from the left */
-    }
+        .sidebar.active {
+            display: flex; /* Show sidebar when active */
+            transform: translateX(0); /* Slide in from the left */
+        }
 
     .main-content {
         margin-left: 0;
