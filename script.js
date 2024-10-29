@@ -56,14 +56,6 @@ document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
 });
 
 
-// Auto-hide sidebar on scroll or touch events
-// window.addEventListener('scroll', () => {
-//     document.querySelector('.sidebar').classList.remove('active');
-// });
-
-// window.addEventListener('touchstart', () => {
-//     document.querySelector('.sidebar').classList.remove('active');
-// });
 
 
  // Function to handle link clicks
@@ -113,7 +105,12 @@ document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
     storedLinks.forEach(link => {
         const visitedLink = document.querySelector(`.sidebar nav ul li a[href="${link}"]`);
         if (visitedLink) {
-            visitedLink.classList.add('visited');
+            visitedLink.classList.add('none');
         }
     });
 });
+
+//Corsor on Hero Text
+setTimeout(() => {
+    document.getElementById('typewriter').classList.add('typing-complete');
+}, 4000); 
