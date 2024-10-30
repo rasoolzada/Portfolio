@@ -76,9 +76,12 @@ h3{
     margin-top: 2em;
 }
 .span-font{
-    font-size: 12px;
+    font-size: 11px;
     color: #40E0D0;
     
+}
+a{
+    text-decoration: none;
 }
 
 .sidebar nav ul {
