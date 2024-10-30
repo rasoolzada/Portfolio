@@ -114,3 +114,22 @@ document.querySelectorAll('.sidebar nav ul li a').forEach(link => {
 setTimeout(() => {
     document.getElementById('typewriter').classList.add('typing-complete');
 }, 4000); 
+
+//Eduction Section
+document.addEventListener("DOMContentLoaded", function() {
+    const educationHeaders = document.querySelectorAll(".education-header");
+
+    educationHeaders.forEach(header => {
+        header.addEventListener("click", function() {
+            const item = header.parentElement;
+            const icon = header.querySelector(".icon");
+            
+            // Toggle the active class for expanding/collapsing
+            item.classList.toggle("active");
+
+            // Change icon based on active state
+            icon.textContent = item.classList.contains("active") ? "−" : "+";
+        });
+    });
+});
+

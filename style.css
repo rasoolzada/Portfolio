@@ -40,11 +40,26 @@ body {
     background: linear-gradient(90deg, #ff6f91, #ff9671);
     color: #ffffff;
 }
-h1, h2, h4, h5, h6 {
+h1, h4, h5, h6 {
     background: linear-gradient(90deg, #00d4ff, #ff00d4); /* Bright teal and magenta for bold contrast */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+h2 {
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #00c3ff); /* Multi-color vibrant gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    font-size: 1.5em; /* Larger for significant impact */
+    font-weight: 900; /* Extra bold for prominence */
+    text-align: center; /* Centered for a striking appearance */
+    letter-spacing: 2px; /* Increased spacing for elegance */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.2); /* Multi-layered shadow for depth */
+    padding: 0.7em 0; /* Generous padding for breathing room */
+    border-bottom: 4px solid rgba(0, 0, 0, 0.258); /* Bold underline for emphasis */
+    margin-bottom: 1em;
+}
+
 h3{
     background: linear-gradient(90deg, #178da5, #ff00d4); /* Bright teal and magenta for bold contrast */
     -webkit-background-clip: text;
@@ -82,6 +97,8 @@ h3{
 }
 a{
     text-decoration: none;
+    color: rgb(124, 214, 124);
+    font-weight: bold;
 }
 
 .sidebar nav ul {
@@ -97,7 +114,7 @@ a{
 .sidebar nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     transition: color 0.3s ease, background-color 0.3s ease; /* Add transition for background color */
     padding: 10px 15px; /* Add padding for better click area */
     border-radius: 5px; /* Rounded corners for links */
@@ -490,12 +507,65 @@ a{
     }
 }
 
+/* Education header styling with icon */
+.education-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Brighter semi-transparent background */
+    color: #1d2b64; /* Dark color for high contrast */
+    border: none;
+    cursor: pointer;
+    padding: 1.2em; /* Comfortable padding */
+    width: 100%;
+    font-size: 1.4em; /* Increased font size for better visibility */
+    font-weight: 700; /* Bold font weight for emphasis */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.education-header:hover {
+    background: rgba(255, 255, 255, 0.3); /* More pronounced hover background */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.icon {
+    font-size: 1.7em; /* Icon size for prominence */
+    transition: transform 0.3s ease; /* Smooth rotation */
+    color: #1d2b64; /* Soft pink for the icon */
+}
+
+/* Rotate icon when expanded */
+.education-item.active .icon {
+    transform: rotate(180deg); /* Rotate effect */
+}
+
+.education-content {
+    max-height: 0; /* Collapsed state */
+    overflow: hidden;
+    background-color: rgba(40, 40, 40, 0.9); /* Dark semi-transparent background for content */
+    color: #f8cdda; /* Light text for readability */
+    padding: 0 1em; /* Horizontal padding */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transitions */
+    font-size: 1em; /* Consistent font size */
+    line-height: 1.5; /* Comfortable line height */
+}
+
+.education-item.active .education-content {
+    max-height: 300px; /* Expanded state height */
+    padding: 1em; /* Padding for expanded content */
+}
+
+
+
 /*For project section in mobile to show 1 column in a row*/
 @media (max-width: 600px) {
     .project-slide {
         flex: 0 1 100%; /* Full width on mobile */
     }
 }
+
+
 
 /* For Mobile */
 /* Hamburger Menu Styling */
