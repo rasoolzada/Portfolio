@@ -52,7 +52,6 @@ h2 {
     -webkit-text-fill-color: transparent; /* Gradient text effect */
     font-size: 1.5em; /* Larger for significant impact */
     font-weight: 900; /* Extra bold for prominence */
-    text-align: center; /* Centered for a striking appearance */
     letter-spacing: 2px; /* Increased spacing for elegance */
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.2); /* Multi-layered shadow for depth */
     padding: 0.7em 0; /* Generous padding for breathing room */
@@ -507,6 +506,78 @@ a{
     }
 }
 
+/*Soft Skills section*/
+
+
+
+
+
+.skills-container-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.skill-item-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(255, 255, 255, 0.2)); /* Light gradient overlay */
+
+    border-radius: 15px;
+    padding: 30px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    flex-basis: 150px;
+    position: relative;
+}
+
+.skill-item-container:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.skill-title {
+    margin: 0;
+}
+
+/* Tooltip styling */
+.skill-description-box {
+    position: absolute;
+    bottom: 100%; /* Position above the skill item */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding: 10px;
+    background: rgba(62, 66, 110, 0.8);
+    border-radius: 8px;
+    display: none; /* Initially hidden */
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.skill-item-container:hover .skill-description-box,
+.skill-item-container:focus-within .skill-description-box {
+    display: block; /* Show on hover */
+}
+
+
+
+@media (max-width: 600px) {
+    .skills-container-flex {
+        flex-direction: column; /* Stack items on mobile */
+    }
+}
+
+
+
+
 /* Education header styling with icon */
 .education-header { 
     display: flex;
@@ -517,6 +588,7 @@ a{
     border: none;
     cursor: pointer;
     padding: 1.2em; /* Comfortable padding */
+    margin-bottom: 0.05em;
     width: 100%;
     font-size: 1.4em; /* Increased font size for better visibility */
     font-weight: 700; /* Bold font weight for emphasis */
@@ -543,18 +615,27 @@ a{
 .education-content {
     max-height: 0; /* Collapsed state */
     overflow: hidden;
-    background-color: rgba(40, 40, 40, 0.9); /* Dark semi-transparent background for content */
-    color: #f8cdda; /* Light text for readability */
+    background: linear-gradient(135deg, rgba(58, 74, 135, 0.8), rgba(120, 102, 193, 0.8)); /* Subtle gradient for depth */
+    color: #f9e4ea; /* Light text for readability */
     padding: 0 1em; /* Horizontal padding */
     transition: max-height 0.3s ease, padding 0.3s ease; /* Smooth transitions */
     font-size: 1em; /* Consistent font size */
     line-height: 1.5; /* Comfortable line height */
+    box-shadow: 0px 4px 20px rgba(248, 205, 218, 0.2); /* Glow effect */
+    margin-bottom: 1.3em;
+
 }
 
 .education-item.active .education-content {
     max-height: 300px; /* Expanded state height */
-    padding: 1em; /* Padding for expanded content */
+    padding: 0.4em; /* Padding for expanded content */
+    margin-bottom: 2em;
+    padding-left: 2em;
 }
+.r_courses{
+    padding-left: 2em;
+}
+
 
 
 
