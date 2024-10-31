@@ -548,7 +548,6 @@ a{
 
 /* Tooltip styling */
 .skill-description-box {
-    z-index: 1000; /* Ensure it appears above other elements */
     position: absolute;
     bottom: 100%; /* Position above the skill item */
     left: 50%;
@@ -559,9 +558,8 @@ a{
     background: rgba(62, 66, 110, 0.8);
     border-radius: 8px;
     display: none; /* Initially hidden */
-    white-space: normal; /* Allow wrapping */
-    max-width: 200px; /* Limit width for better readability */
-    overflow: auto; /* Allows content to scroll if still larger */
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .skill-item-container:hover .skill-description-box,
@@ -629,11 +627,22 @@ a{
 }
 
 .education-item.active .education-content {
-    max-height: 300px; /* Expanded state height */
+    max-height: none; /* Expanded state height */
     padding: 0.4em; /* Padding for expanded content */
     margin-bottom: 2em;
     padding-left: 2em;
 }
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .education-item.active .education-content {
+        max-height: none; /* Allow full expansion on mobile */
+        padding: 0.4em;
+        margin-bottom: 2em;
+        padding-left: 1em; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
 .r_courses{
     padding-left: 2em;
 }
