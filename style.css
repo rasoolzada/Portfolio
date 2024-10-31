@@ -553,7 +553,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 10px;
     background: rgba(62, 66, 110, 0.8);
     border-radius: 8px;
