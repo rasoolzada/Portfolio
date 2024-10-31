@@ -548,6 +548,7 @@ a{
 
 /* Tooltip styling */
 .skill-description-box {
+    z-index: 1000; /* Ensure it appears above other elements */
     position: absolute;
     bottom: 100%; /* Position above the skill item */
     left: 50%;
@@ -558,8 +559,9 @@ a{
     background: rgba(62, 66, 110, 0.8);
     border-radius: 8px;
     display: none; /* Initially hidden */
-    white-space: nowrap;
-    z-index: 1000; /* Ensure it appears above other elements */
+    white-space: normal; /* Allow wrapping */
+    max-width: 200px; /* Limit width for better readability */
+    overflow: auto; /* Allows content to scroll if still larger */
 }
 
 .skill-item-container:hover .skill-description-box,
