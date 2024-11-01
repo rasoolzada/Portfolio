@@ -66,7 +66,7 @@ body {
 
 .footer-text {
     font-size: 14px; /* Adjust font size */
-    color: #fff; /* Change to your preferred color */
+    color: #ffffff8c; /* Change to your preferred color */
     margin-top: 5px; /* Space above text */
     text-align: center; /* Center align if needed */
     margin-bottom: 3em;
@@ -357,9 +357,6 @@ a{
 
 
 
-.alt-background {
-    
-}
 
 /*Skills*/
 .skills-container {
@@ -420,8 +417,54 @@ a{
 }
 
 
-
-
+/* Tools Section */
+.tools-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .tool-card {
+    position: relative;
+    width: 250px; /* Default size for larger screens */
+    height: 250px;
+    margin: 20px; /* Spacing between cards */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.185), rgba(255, 255, 255, 0.2));
+    border-radius: 12; /* Slightly larger radius for a softer look */
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+    /* background: linear-gradient(135deg, #00ccff, #ff00cc); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+  }
+  
+  .tool-card:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tool-icon img {
+    width: 80px; /* Icon size */
+    height: 80px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+  }
+  
+  .tool-card:hover .tool-icon img {
+    transform: rotate(15deg); /* Slight rotation on hover */
+  }
+  
+  .tool-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    text-align: center;
+  }
+  
 
 /* CTA Button */
 .cta-button {

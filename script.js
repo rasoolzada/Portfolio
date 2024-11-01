@@ -151,4 +151,25 @@ window.onclick = function(event) {
     });
 };
 
+//Tools
+const tools = document.querySelectorAll('.tool-card');
 
+const options = {
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    } else {
+      entry.target.classList.remove('fade-in');
+    }
+  });
+}, options);
+
+tools.forEach((tool) => {
+  observer.observe(tool);
+});
+
+  
