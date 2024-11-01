@@ -33,7 +33,7 @@ body {
     text-align: center;
     z-index: 1000; /* Bring sidebar in front of main content */
     transition: transform 0.3s ease;
-    overflow-y: auto;
+    
 
 }
 
