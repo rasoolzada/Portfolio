@@ -133,5 +133,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//SoftSkills
+//Certifications
+function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+}
+
+// Optional: Close modal when clicking outside of it
+window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+};
+
 
