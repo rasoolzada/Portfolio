@@ -33,6 +33,7 @@ body {
     text-align: center;
     z-index: 1000; /* Bring sidebar in front of main content */
     transition: transform 0.3s ease;
+    overflow-y: auto;
 
 }
 
@@ -662,7 +663,7 @@ a{
 
 /* Card Styling */
 .certification-card {
-    width: 250px;
+    width: 240px;
     height: 280px;
     cursor: pointer;
     border-radius: 10px;
@@ -720,7 +721,7 @@ a{
 
 /* Back Card */
 .flip-card-back {
-    background: linear-gradient(135deg, #fc466ad8, #3f5efbc9);
+    background: linear-gradient(135deg, #fc466a, #3f5efbc9);
     color: #ffffff;
     transform: rotateY(180deg);
     text-align: center;
@@ -729,7 +730,7 @@ a{
     flex-direction: column;
 }
 .fliped-card-inner-text{
-    color: rgb(243, 0, 251);
+    color: rgb(114, 9, 118);
     font-size: 2.1em;
     padding-bottom: 0.5em;
 }
