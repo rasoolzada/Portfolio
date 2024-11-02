@@ -466,6 +466,15 @@ a{
   }
   
 
+  /* Adjust for mobile screens */
+@media (max-width: 768px) {
+    .tool-card {
+      width: 200px; /* Smaller width */
+      height: 200px; /* Smaller height */
+    }
+  }
+  
+
 /* CTA Button */
 .cta-button {
     display: inline-block;
