@@ -244,7 +244,9 @@ a{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/bg.gif') no-repeat center center/cover;
+    background: url('Images/bg.png') no-repeat center;
+    background-size: contain;
+    -webkit-background-size: cover;
     display: flex;
     align-items: center;
     justify-content: left; /* Centered for better responsiveness */
