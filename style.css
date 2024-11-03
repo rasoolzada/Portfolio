@@ -69,7 +69,23 @@ body {
     color: #ffffff8c; /* Change to your preferred color */
     margin-top: 5px; /* Space above text */
     text-align: center; /* Center align if needed */
-    margin-bottom: 3em;
+    padding-bottom: 5em;
+}
+
+
+/* Scrollbar styling for a thinner appearance */
+.sidebar::-webkit-scrollbar {
+    width: 3px; /* Slim scrollbar width */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #4e4376; /* Match scrollbar track to sidebar background */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #ff6f91; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 1px solid #ff9671; /* Optional border for a refined look */
 }
 
 h1, h4, h5, h6 {
@@ -228,7 +244,7 @@ a{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/bg.png') no-repeat center center/cover;
+    background: url('Images/bg.gif') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: left; /* Centered for better responsiveness */
@@ -460,13 +476,13 @@ a{
   
   .tool-name {
     margin-top: 10px;
+    margin-bottom: 30px;
     font-weight: bold;
     color: #ffffff; /* Text color */
     text-align: center;
   }
   
 
-  /* Adjust for mobile screens */
 
 
 
@@ -870,14 +886,44 @@ a{
 }
 
 
-
-
 /*For project section in mobile to show 1 column in a row*/
 @media (max-width: 600px) {
     .project-slide {
         flex: 0 1 100%; /* Full width on mobile */
     }
 }
+
+/*Contact*/
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+
+.contact-link {
+    color: rgb(0, 21, 251);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    
+}
+
+.contact-link:hover {
+    color: rgb(36, 96, 36);
+}
+
+.contact-icon {
+    font-size: 2rem;
+}
+
+
 
 
 
