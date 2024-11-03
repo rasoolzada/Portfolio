@@ -244,7 +244,7 @@ a{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/bg.png') no-repeat center;
+    background: url('Images/bg2.png') no-repeat center;
     background-size: contain;
     -webkit-background-size: cover;
     display: flex;
@@ -907,8 +907,7 @@ a{
 
 .contact-link {
     color: rgb(0, 21, 251);
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
     text-decoration: none;
     display: flex;
     align-items: center;
