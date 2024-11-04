@@ -246,7 +246,7 @@ a{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/hero_bg1.jpg') no-repeat center;
+    background: url('Images/hero_bg.jpg') no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -262,7 +262,7 @@ a{
 
 @media (max-width: 767px) {
     .hero {
-        background-image: url('Images/img16.jpg');
+        background-image: url('Images/hero_bg2.jpg');
     }
 }
 
