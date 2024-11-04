@@ -253,7 +253,13 @@ a{
     justify-content: left; /* Centered for better responsiveness */
     padding: 5%; /* Use responsive padding */
     position: relative;
-    color: white;
+    color: rgb(2, 255, 19);
+    text-shadow: 
+    -4px -4px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    font-weight: bold;
     overflow: hidden;
     text-align: center;
 }
