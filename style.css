@@ -88,7 +88,9 @@ body {
     border: 1px solid #ff9671; /* Optional border for a refined look */
 }
 
-h1, h4, h5, h6 {
+
+
+h4, h5, h6 {
     background: linear-gradient(90deg, #00d4ff, #ff00d4); /* Bright teal and magenta for bold contrast */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -244,9 +246,8 @@ a{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('Images/bg2.png') no-repeat center;
-    background-size: contain;
-    -webkit-background-size: cover;
+    background: url('Images/hero_bg1.jpg') no-repeat center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: left; /* Centered for better responsiveness */
@@ -257,13 +258,27 @@ a{
     text-align: center;
 }
 
-.hero-text h1 {
-    font-size: 6vw; /* Responsive font size */
-    margin-bottom: 0.5em;
-    animation: fadeInUp 3s ease forwards; /* Updated animation */
-    text-align: left;
-    
+/*Responsive Bg*/
+
+@media (max-width: 767px) {
+    .hero {
+        background-image: url('Images/img1.jpg');
+    }
 }
+
+
+.hero-text h1 {
+    font-size: 5rem; /* Adjust as needed */
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff00ea, #ffdd00, #00ff7f, #6495ed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5), 2px 2px 10px rgba(255, 111, 97, 0.3);
+    margin: 20px 0;
+}
+
+
 
 .hero h1 {
     margin: 0; /* Remove default margin */
